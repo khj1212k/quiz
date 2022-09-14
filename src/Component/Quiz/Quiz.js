@@ -26,9 +26,9 @@ const Quiz = (props) => {
   return (
     <div>
         <div>
-        <div className="App">
-        <ProgressBar  completed={num/5*100} />
-    </div>
+        <ProgressBar completed={num/5*100} />
+        </div>
+        <div>
             <p>{num+1}번 문제</p>
             <p>{quizes[num].quiz}</p>
         </div>
