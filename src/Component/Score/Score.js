@@ -18,10 +18,13 @@ const Score = (props) => {
   // console.log(props.quizes[0]);
   return (
     <div>
-        <h1>{props.name} 퀴즈에 대한 내 점수는?</h1>
+        <h1>{props.name} 퀴즈에 대한 {props.myName}님의 점수는?</h1>
         <div>
             <span>{props.score}점</span>
         </div>
+        {props.score === 100 && (<div>만점! 대단해요!</div>)}
+        {props.score < 100 && props.score > 60 && (<div>대단해요!</div>)}
+        {props.score <= 60 && (<div>아쉬워요!</div>)}
         <div>{isRetrieve ? <button onClick={retrieveAnswer}>정답 보기</button> : 
                     <>
                       <button onClick={retrieveAnswer}>정답 닫기</button>
