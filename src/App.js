@@ -8,21 +8,30 @@ function App() {
 
   const [page, setPage] = useState('start'); // 
   const [score, setScore] = useState(0); 
+  const [answer, setAnswer] = useState([]); 
 
   const pageHandler = (newPage) => {
     setPage(newPage);
   }
 
-  const scoreHandler = () => {
-    setScore(score + 20);
+  const scoreHandler = (changedScore) => {
+    setScore(changedScore);
   }
+
+  const resetScoreHandler = () => {
+    setScore(0);
+  }
+
+  const answerHandler = (change)=>{
+    setAnswer(change);
+  };
 
   console.log(page);
   return (
     <>
       {page === 'start' && (<Start name="세종대왕" changePage={pageHandler} />)}
-      {page === 'quiz' && (<Quiz quizes={quizes} changePage={pageHandler} calculateScore={scoreHandler} />)}
-      {page === 'score' && (<Score name="세종대왕" score={score} changePage={pageHandler} />)}
+      {page === 'quiz' && (<Quiz quizes={quizes} changePage={pageHandler} calculateScore={scoreHandler} score={score} answer = {answer} answerHandler={answerHandler} />)}
+      {page === 'score' && (<Score name="세종대왕" score={score} changePage={pageHandler} resetScoreHandler={resetScoreHandler} answerHandler={answerHandler}/>)}
     </>
   );
 }

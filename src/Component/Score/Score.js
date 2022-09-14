@@ -3,6 +3,8 @@ const Score = (props) => {
 
   const reTry = () => {
     props.changePage('start');
+    props.resetScoreHandler();
+    props.answerHandler([]);
   }
 
   return (
