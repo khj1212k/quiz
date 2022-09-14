@@ -31,7 +31,7 @@ function App() {
     <>
       {page === 'start' && (<Start name="세종대왕" changePage={pageHandler} />)}
       {page === 'quiz' && (<Quiz quizes={quizes} changePage={pageHandler} calculateScore={scoreHandler} score={score} answer = {answer} answerHandler={answerHandler} />)}
-      {page === 'score' && (<Score name="세종대왕" score={score} changePage={pageHandler} resetScoreHandler={resetScoreHandler} answerHandler={answerHandler}/>)}
+      {page === 'score' && (<Score name="세종대왕"  quizes={quizes} score={score} changePage={pageHandler} resetScoreHandler={resetScoreHandler} answerHandler={answerHandler}/>)}
     </>
   );
 }
