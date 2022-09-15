@@ -1,0 +1,52 @@
+#scr {
+    margin-top: 40pt;
+    margin-bottom: 40pt;
+    font-family: "Cafe24Ssurround";
+    color: #222222;
+}
+
+.score {
+
+    font-family: "Cafe24Ssurround";
+    color: #be0000;
+    font-size: 80pt;
+}
+
+.str {
+    margin: 2%;
+    font-family: "Cafe24Ssurround";
+    color: #be0000;
+    font-size: 83pt;
+}
+
+.answer {
+
+    margin-top: 40pt;
+    display: inline-block;
+    width: 50%;
+    box-shadow: 0.3rem 0.4rem 0 #222222;
+    border-radius: 3rem;
+    border: 0.25rem solid #222222;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    font-family: 'jalnan', sans-serif;
+    background: #ffd524;
+
+}
+
+.close {
+    margin-top: 18pt;
+    margin-bottom: 50pt;
+    display: inline-block;
+    width: 50%;
+    box-shadow: 0.3rem 0.4rem 0 #222222;
+    border-radius: 3rem;
+    border: 0.25rem solid #222222;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    font-family: 'jalnan', sans-serif;
+    background: #ffd524;
+
+}
